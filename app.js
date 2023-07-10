@@ -138,19 +138,6 @@ app.post("/:customListName", (req, res) => {
         });
 });
 
-// app.post("/:customListName/delete", (req, res) => {
-//     const customListName = req.params.customListName;
-//     const checkedItemId = req.body.checkbox;
-
-//     List.findOneAndUpdate({ name: customListName }, { $pull: { items: { _id: checkedItemId } } })
-//     .then(() => {
-//         res.redirect("/" + customListName);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     });
-// });
-
 app.listen(process.env.PORT || 3000, () => {
     console.log('App listening on port 3000!');
 });
